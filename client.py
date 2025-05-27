@@ -7,8 +7,8 @@ import json
 async def main():
     async with Client("http://127.0.0.1:8000/mcp") as client:
         # Test GET all
-        # all_objects = await client.call_tool("get_all_objects", {})   
-        # print("All objects:", all_objects)
+        all_objects = await client.call_tool("get_all_objects", {})   
+        print("All objects:", all_objects)
 
         # Test POST
         new_obj = {"name": "MCP Widget", "data": {"type": "demo"}}
